@@ -1,3 +1,149 @@
 .header {
-    
+  &__inner {
+    width: 100%;
+    max-width: 1600px;
+    height: 112px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 80px;
+  }
+
+  &__logo {
+    &-svg {
+      width: 143px;
+      height: 57px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    position: relative;
+    top: -5px;
+
+    &-text {
+      margin-right: 12px;
+    }
+
+    &-links {
+      display: flex;
+    }
+
+    &-link {
+      position: relative;
+
+      font-family: "GothamPro-Bold", sans-serif;
+      font-weight: 700;
+
+      padding-left: 15px;
+
+      & + & {
+        margin-left: 12px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+
+        border-radius: 50%;
+        background: $secondary;
+
+        width: 10px;
+        height: 10px;
+      }
+
+      &--viber::before {
+        background: #7d3daf;
+      }
+
+      &--whatsapp::before {
+        background: #1fb69f;
+      }
+
+      &--telegram::before {
+        background: #2ca0da;
+      }
+    }
+  }
+
+  &__tel {
+    position: relative;
+    top: -5px;
+
+    font-family: "GothamPro-Medium", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+
+    &-span {
+      color: $secondary;
+    }
+
+    &-svg {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &__info {
+    display: flex;
+
+    &-depth {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      max-width: 268px;
+      height: 112px;
+
+      padding: 40px 25px 40px 45px;
+
+      background: url(../images/header/depth-bg.png) top left no-repeat;
+
+      color: $white;
+      font-family: "GothamPro-Medium", sans-serif;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    &-price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      max-width: 268px;
+      height: 112px;
+
+      padding: 40px 38px 40px 18px;
+
+      background: url(../images/header/price-bg.png) top left no-repeat;
+
+      color: $white;
+      font-family: "GothamPro-Medium", sans-serif;
+      font-weight: 500;
+      line-height: 1;
+    }
+  }
+
+  &__depth-svg {
+    width: 35px;
+    height: 28px;
+
+    margin-right: 18px;
+  }
+
+  &__price-svg {
+    width: 43px;
+    height: 28px;
+
+    margin-right: 18px;
+  }
 }

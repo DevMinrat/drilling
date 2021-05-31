@@ -1,24 +1,51 @@
 <header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__logo">
-                <img src="assets/images/logo-icon.png" alt="">
-                <img src="assets/images/logo-text.svg" alt="">
+    <div class="header__inner">
+        <div class="header__logo">
+            <svg class="header__logo-svg">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </div>
+        <div class="header__social">
+            <p class="header__social-text">Напишите нам</p>
+            <div class="header__social-links">
+                <a class="header__social-link header__social-link--viber" href="#">Viber</a>
+                <a class="header__social-link header__social-link--whatsapp" href="#">Whatsapp</a>
+                <a class="header__social-link header__social-link--telegram" href="#">Telegram</a>
             </div>
-            <nav class="menu">
-                <ul class="menu__nav-list">
-                    <li class="nav-list__item">
-                        <a href="#opportunities" class="nav-list__item-link">Наши возможности</a>
-                    </li>
-                    <li class="nav-list__item">
-                        <a href="#getting" class="nav-list__item-link">Что вы получаете</a>
-                    </li>
-                    <li class="nav-list__item">
-                        <a href="#partners" class="nav-list__item-link">Партнеры</a>
-                    </li>
-                </ul>
-            </nav>
-
+        </div>
+        <a class="header__tel" href="tel:+73952799343">
+            <svg class="header__tel-svg">
+                <use xlink:href="#micro"></use>
+            </svg>
+            +7 (3952) <span class="header__tel-span">799-343</span>
+        </a>
+        <div class="header__info">
+            <div class="header__info-depth">
+                <svg class="header__depth-svg">
+                    <use xlink:href="#point"></use>
+                </svg>
+                Узнать глубину на участке
+            </div>
+            <div class="header__info-price">
+                <svg class="header__price-svg">
+                    <use xlink:href="#price"></use>
+                </svg>
+                Рассчитать стоимость бурения
+            </div>
         </div>
     </div>
+
+    <!-- <nav class="menu">
+            <ul class="menu__nav-list">
+                <li class="nav-list__item">
+                    <a href="#opportunities" class="nav-list__item-link">Наши возможности</a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#getting" class="nav-list__item-link">Что вы получаете</a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#partners" class="nav-list__item-link">Партнеры</a>
+                </li>
+            </ul>
+        </nav> -->
 </header>

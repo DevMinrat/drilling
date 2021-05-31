@@ -17,19 +17,19 @@ html {
 body {
   background-color: $white;
 
-  font-family: Poppins, sans-serif;
+  font-family: "GothamPro-Regular", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.2;
-  color: $black;
+  color: $primary;
 }
 
 a {
   text-decoration: none;
-  color: $black;
+  color: $primary;
 
   &:hover {
-    color: $primary;
+    color: $secondary;
   }
 }
 
@@ -40,6 +40,7 @@ a {
 @import "blocks/page";
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/intro";
 @import "blocks/footer";
 
 .hide {

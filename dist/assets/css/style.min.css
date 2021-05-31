@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "GothamPro-Light";
+  src: url("../fonts/GothamPro-Light.woff2") format("woff2"), url("../fonts/GothamPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap; }
+
+@font-face {
+  font-family: "GothamPro-Regular";
+  src: url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.woff") format("woff");
+  font-weight: 400;
+  font-display: swap; }
+
+@font-face {
+  font-family: "GothamPro-Medium";
+  src: url("../fonts/GothamPro-Medium.woff2") format("woff2"), url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap; }
+
+@font-face {
+  font-family: "GothamPro-Bold";
+  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -409,17 +433,17 @@ html {
 
 body {
   background-color: #ffffff;
-  font-family: Poppins, sans-serif;
+  font-family: "GothamPro-Regular", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.2;
-  color: #343a40; }
+  color: #37455c; }
 
 a {
   text-decoration: none;
-  color: #343a40; }
+  color: #37455c; }
   a:hover {
-    color: #3355ff; }
+    color: #005aff; }
 
 /* Vendors */
 /* Blocks */
@@ -431,6 +455,104 @@ a {
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto; }
+
+.header__inner {
+  width: 100%;
+  max-width: 1600px;
+  height: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px; }
+
+.header__logo-svg {
+  width: 143px;
+  height: 57px; }
+
+.header__social {
+  display: flex;
+  position: relative;
+  top: -5px; }
+  .header__social-text {
+    margin-right: 12px; }
+  .header__social-links {
+    display: flex; }
+  .header__social-link {
+    position: relative;
+    font-family: "GothamPro-Bold", sans-serif;
+    font-weight: 700;
+    padding-left: 15px; }
+    .header__social-link + .header__social-link {
+      margin-left: 12px; }
+    .header__social-link::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background: #005aff;
+      width: 10px;
+      height: 10px; }
+    .header__social-link--viber::before {
+      background: #7d3daf; }
+    .header__social-link--whatsapp::before {
+      background: #1fb69f; }
+    .header__social-link--telegram::before {
+      background: #2ca0da; }
+
+.header__tel {
+  position: relative;
+  top: -5px;
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1; }
+  .header__tel-span {
+    color: #005aff; }
+  .header__tel-svg {
+    width: 21px;
+    height: 21px; }
+
+.header__info {
+  display: flex; }
+  .header__info-depth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 268px;
+    height: 112px;
+    padding: 40px 25px 40px 45px;
+    background: url(../images/header/depth-bg.png) top left no-repeat;
+    color: #ffffff;
+    font-family: "GothamPro-Medium", sans-serif;
+    font-weight: 500;
+    line-height: 1; }
+  .header__info-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 268px;
+    height: 112px;
+    padding: 40px 38px 40px 18px;
+    background: url(../images/header/price-bg.png) top left no-repeat;
+    color: #ffffff;
+    font-family: "GothamPro-Medium", sans-serif;
+    font-weight: 500;
+    line-height: 1; }
+
+.header__depth-svg {
+  width: 35px;
+  height: 28px;
+  margin-right: 18px; }
+
+.header__price-svg {
+  width: 43px;
+  height: 28px;
+  margin-right: 18px; }
 
 .hide {
   display: none; }
