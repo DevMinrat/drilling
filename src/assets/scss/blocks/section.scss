@@ -1,0 +1,25 @@
+.section__title {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 7.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+
+  &-sup {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 4.5rem;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--exp {
+    font-size: 11rem;
+
+    margin-right: 40px;
+  }
+}
