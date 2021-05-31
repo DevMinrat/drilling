@@ -1,7 +1,7 @@
 .header {
   &__inner {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1900px;
     height: 112px;
 
     display: flex;
@@ -9,6 +9,7 @@
     align-items: center;
 
     padding: 0 80px;
+    margin: 0 auto;
   }
 
   &__logo {
@@ -79,7 +80,6 @@
     font-family: "GothamPro-Medium", sans-serif;
     font-weight: 500;
     font-size: 2rem;
-    line-height: 1;
 
     &-span {
       color: $secondary;
@@ -110,7 +110,6 @@
       color: $white;
       font-family: "GothamPro-Medium", sans-serif;
       font-weight: 500;
-      line-height: 1;
     }
 
     &-price {
@@ -129,7 +128,6 @@
       color: $white;
       font-family: "GothamPro-Medium", sans-serif;
       font-weight: 500;
-      line-height: 1;
     }
   }
 

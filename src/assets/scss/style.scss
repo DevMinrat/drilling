@@ -20,7 +20,7 @@ body {
   font-family: "GothamPro-Regular", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.2;
+  line-height: 1;
   color: $primary;
 }
 
@@ -49,4 +49,11 @@ a {
 
 .show {
   display: block;
+}
+
+.rub {
+  line-height: 9px;
+  width: 0.3em;
+  border-bottom: 1px solid $black;
+  display: inline-block;
 }
