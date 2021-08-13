@@ -2,7 +2,7 @@
   position: relative;
 
   padding-top: 200px;
-  padding-bottom: 100px;
+  padding-bottom: 76px;
 
   &::before {
     content: "";
@@ -18,22 +18,6 @@
 
     transform: skewY(-13deg);
   }
-}
-
-.afterwork__title {
-  font-family: "GothamPro-Bold", sans-serif;
-  font-size: 7.5rem;
-  font-weight: bold;
-
-  text-transform: uppercase;
-
-  margin-bottom: 50px;
-}
-
-.afterwork__title-up {
-  display: block;
-
-  font-size: 4.5rem;
 }
 
 .afterwork__descr {

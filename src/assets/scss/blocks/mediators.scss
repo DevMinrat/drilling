@@ -1,0 +1,65 @@
+.mediators {
+  position: relative;
+
+  padding-top: 180px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 245%;
+
+    background: $primary;
+
+    transform: skewY(-13deg);
+  }
+}
+
+.mediators__inner {
+  position: relative;
+}
+
+.mediators__descr {
+  font-size: 2.4rem;
+  color: $white;
+
+  margin-bottom: 37px;
+}
+
+.mediators__text {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 13.9rem;
+  color: $white;
+
+  text-transform: uppercase;
+}
+
+.mediators__img {
+  position: absolute;
+  z-index: 1;
+}
+
+.mediators__images-wrapper {
+  position: relative;
+}
+
+.mediators__img--tree {
+  top: -220px;
+  right: 80px;
+  z-index: -1;
+}
+
+.mediators__img--scheme {
+  top: 15px;
+  left: -40px;
+}
+
+.mediators__img--kamaz {
+  top: -170px;
+  left: -170px;
+}

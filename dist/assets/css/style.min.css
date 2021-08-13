@@ -821,7 +821,7 @@ a {
 .afterwork {
   position: relative;
   padding-top: 200px;
-  padding-bottom: 100px; }
+  padding-bottom: 76px; }
   .afterwork::before {
     content: "";
     position: absolute;
@@ -832,17 +832,6 @@ a {
     height: 130%;
     background: #eff4f5;
     transform: skewY(-13deg); }
-
-.afterwork__title {
-  font-family: "GothamPro-Bold", sans-serif;
-  font-size: 7.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 50px; }
-
-.afterwork__title-up {
-  display: block;
-  font-size: 4.5rem; }
 
 .afterwork__descr {
   width: 100%;
@@ -968,6 +957,55 @@ a {
     width: 29px;
     height: 29px;
     background: url(../images/afterwork/check-mark.png) no-repeat center; }
+
+.mediators {
+  position: relative;
+  padding-top: 180px; }
+  .mediators::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 245%;
+    background: #37455c;
+    transform: skewY(-13deg); }
+
+.mediators__inner {
+  position: relative; }
+
+.mediators__descr {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 37px; }
+
+.mediators__text {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 13.9rem;
+  color: #ffffff;
+  text-transform: uppercase; }
+
+.mediators__img {
+  position: absolute;
+  z-index: 1; }
+
+.mediators__images-wrapper {
+  position: relative; }
+
+.mediators__img--tree {
+  top: -220px;
+  right: 80px;
+  z-index: -1; }
+
+.mediators__img--scheme {
+  top: 15px;
+  left: -40px; }
+
+.mediators__img--kamaz {
+  top: -170px;
+  left: -170px; }
 
 .hide {
   display: none; }
