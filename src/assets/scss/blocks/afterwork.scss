@@ -1,0 +1,109 @@
+.afterwork {
+  position: relative;
+  height: 500px;
+
+  padding-top: 200px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 150%;
+
+    background: $third;
+
+    transform: skewY(-13deg);
+  }
+}
+
+.afterwork__title {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-size: 7.5rem;
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  margin-bottom: 50px;
+}
+
+.afterwork__title-up {
+  display: block;
+
+  font-size: 4.5rem;
+}
+
+.afterwork__descr {
+  width: 100%;
+  max-width: 950px;
+
+  font-size: 2.4rem;
+
+  margin-bottom: 75px;
+}
+
+.afterwork__item {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 490px;
+
+  padding-top: 37px;
+
+  &--bad {
+    background-color: $white;
+  }
+}
+
+.afterwork__item-title {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+
+  margin-bottom: 35px;
+  padding: 0 30px;
+}
+
+.afterwork__item-list {
+  padding: 0 30px;
+  margin-bottom: 40px;
+}
+
+.afterwork-item__list-item {
+  display: flex;
+  align-items: center;
+
+  height: 29px;
+
+  padding-left: 41px;
+}
+
+.afterwork-item__list-item + .afterwork-item__list-item {
+  margin-top: 20px;
+}
+
+.afterwork__item-img {
+  width: 100%;
+  height: auto;
+}
+
+.cross-mark {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    width: 29px;
+    height: 29px;
+
+    background: url(../images/afterwork/cross-mark.png) no-repeat center;
+  }
+}

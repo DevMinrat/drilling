@@ -448,7 +448,6 @@ a {
 /* Vendors */
 /* Blocks */
 .page {
-  overflow: hidden;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto; }
@@ -770,6 +769,131 @@ a {
 .periods-item__date {
   font-family: "GothamPro-Medium", sans-serif;
   font-weight: 500; }
+
+.exp__benefits {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 150px; }
+  .exp__benefits::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 150%;
+    background: #37455c; }
+
+.exp__benefits-inner {
+  display: flex;
+  flex-wrap: wrap; }
+
+.exp__benefits-item {
+  display: flex;
+  width: 100%;
+  max-width: 570px;
+  margin-bottom: 35px; }
+  .exp__benefits-item:nth-child(even) {
+    margin-left: 40px; }
+
+.benefits-item__img {
+  margin-right: 20px; }
+
+.benefits-item_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 20px; }
+
+.benefits-item__title {
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px; }
+
+.benefits-item__descr {
+  font-size: 1.4rem;
+  color: #ffffff; }
+
+.afterwork {
+  position: relative;
+  height: 500px;
+  padding-top: 200px; }
+  .afterwork::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 150%;
+    background: #eff4f5;
+    transform: skewY(-13deg); }
+
+.afterwork__title {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-size: 7.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 50px; }
+
+.afterwork__title-up {
+  display: block;
+  font-size: 4.5rem; }
+
+.afterwork__descr {
+  width: 100%;
+  max-width: 950px;
+  font-size: 2.4rem;
+  margin-bottom: 75px; }
+
+.afterwork__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 490px;
+  padding-top: 37px; }
+  .afterwork__item--bad {
+    background-color: #ffffff; }
+
+.afterwork__item-title {
+  font-family: "GothamPro-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  padding: 0 30px; }
+
+.afterwork__item-list {
+  padding: 0 30px;
+  margin-bottom: 40px; }
+
+.afterwork-item__list-item {
+  display: flex;
+  align-items: center;
+  height: 29px;
+  padding-left: 41px; }
+
+.afterwork-item__list-item + .afterwork-item__list-item {
+  margin-top: 20px; }
+
+.afterwork__item-img {
+  width: 100%;
+  height: auto; }
+
+.cross-mark {
+  position: relative; }
+  .cross-mark::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 29px;
+    height: 29px;
+    background: url(../images/afterwork/cross-mark.png) no-repeat center; }
 
 .hide {
   display: none; }
