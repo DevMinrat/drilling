@@ -44,7 +44,6 @@
 
 .mediators__img {
   position: absolute;
-  z-index: 1;
 }
 
 .mediators__images-wrapper {
@@ -54,16 +53,39 @@
 .mediators__img--tree {
   top: -220px;
   right: 80px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .mediators__img--scheme {
   top: 15px;
   left: -40px;
+  z-index: 2;
 }
 
 .mediators__img--kamaz {
   position: relative;
   top: -170px;
   left: -170px;
+  z-index: 3;
+}
+
+.mediators__line {
+  position: absolute;
+  z-index: -1;
+
+  width: 1px;
+  height: 1015px;
+
+  background: $white;
+  opacity: 0.1;
+
+  &--1 {
+    top: 18%;
+    left: 40%;
+  }
+
+  &--2 {
+    top: -40%;
+    right: -10%;
+  }
 }
