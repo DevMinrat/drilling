@@ -968,12 +968,15 @@ a {
     top: 0;
     z-index: -1;
     width: 100%;
-    height: 245%;
+    height: 110%;
     background: #37455c;
     transform: skewY(-13deg); }
 
 .mediators__inner {
   position: relative; }
+
+.section__title--mediators {
+  margin-bottom: 24px; }
 
 .mediators__descr {
   font-size: 2.4rem;
@@ -1004,8 +1007,141 @@ a {
   left: -40px; }
 
 .mediators__img--kamaz {
+  position: relative;
   top: -170px;
   left: -170px; }
+
+.guaranties {
+  position: relative;
+  padding-top: 30px; }
+  .guaranties::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    background: #eff4f5;
+    transform: skewY(-13deg); }
+
+.guaranties__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px; }
+
+.guaranties__header-image {
+  position: relative;
+  width: 100%;
+  max-width: 286px;
+  margin-right: 122px;
+  background: url(../images/guaranties/guaranties-img-bg.png) no-repeat center; }
+
+.guaranties-header__img {
+  position: relative;
+  top: -135px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%); }
+
+.guaranties-header__image-text {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 170px;
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: #ffffff;
+  text-align: center; }
+
+.guaranties-header__content-title {
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 25px; }
+
+.guaranties-header__content-text {
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 2rem; }
+
+.guaranties__years {
+  display: flex;
+  margin-bottom: 65px; }
+
+.guaranties__year {
+  display: flex;
+  align-items: center; }
+  .guaranties__year + .guaranties__year {
+    margin-left: 40px; }
+
+.guaranties__year-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 136px;
+  height: 82px;
+  font-size: 5rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 30px;
+  margin-right: 30px;
+  background: url(../images/guaranties/rectangle.png) no-repeat;
+  background-size: cover; }
+  .guaranties__year-num sup {
+    align-self: flex-start;
+    font-size: 2rem;
+    margin-left: 5px; }
+
+.guaranties__year-text {
+  width: 100%;
+  max-width: 415px;
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 2rem; }
+
+.guaranties__points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.guaranties__point {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 388px;
+  height: 220px;
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  padding: 25px 17px 25px 77px;
+  margin-bottom: 30px;
+  background-color: #ffffff; }
+
+.guaranties__point-num {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 117px;
+  font-size: 2.2rem;
+  background: url(../images/guaranties/trapezoid.png) no-repeat; }
+
+.guaranties__point-text--blue {
+  color: #005aff; }
+
+.guaranties__point-text--inside {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 15px; }
 
 .hide {
   display: none; }
