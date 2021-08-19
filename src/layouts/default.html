@@ -27,7 +27,17 @@
     </div>
 
     <!-- JS -->
-    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
+    </script>
+    <script>
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animate__animated',
+            offset: 100,
+        })
+        wow.init();
+    </script>
 </body>
 
 </html>

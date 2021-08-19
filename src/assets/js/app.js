@@ -1,31 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header"),
+    headerFixed = document.querySelector(".header-fixed"),
     burgerMenu = document.querySelector(".burger-menu"),
     menu = document.querySelector(".menu"),
     headerLogo = document.querySelector(".header__logo"),
     anchors = document.querySelectorAll('a[href*="#"]'),
-    textarea = document.querySelector("#contacts-textarea"),
-    counterCurrent = document.querySelector(".textarea-counter__current"),
-    counterTotal = (document.querySelector(
-      ".textarea-counter__total"
-    ).textContent = textarea.maxLength),
     toTopBtn = document.querySelector(".arrow-top");
 
   function toggleMobileMenu() {
     header.classList.toggle("mobile");
     headerLogo.classList.toggle("hide");
-    menu.classList.toggle("show");
-    burgerMenu.classList.toggle("menu-on");
+    // menu.classList.toggle("show");
+    // burgerMenu.classList.toggle("menu-on");
   }
 
   function hideMobileMenu() {
     header.classList.remove("mobile");
     headerLogo.classList.remove("hide");
-    menu.classList.remove("show");
-    burgerMenu.classList.remove("menu-on");
+    // menu.classList.remove("show");
+    // burgerMenu.classList.remove("menu-on");
   }
 
-  burgerMenu.addEventListener("click", toggleMobileMenu);
+  let scrollPrev = 0;
+
+  window.addEventListener("scroll", () => {
+    let scrolled = document.documentElement.scrollTop;
+
+    if (scrolled == 0 || scrolled > scrollPrev) {
+      headerFixed.classList.add("out");
+    } else {
+      headerFixed.classList.remove("out");
+    }
+    scrollPrev = scrolled;
+  });
+
+  // burgerMenu.addEventListener("click", toggleMobileMenu);
   window.addEventListener("scroll", hideMobileMenu);
 
   // smooth scroll
@@ -43,20 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // button_up
+  // // button_up
 
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 580) {
-      toTopBtn.style.display = "block";
-    } else {
-      toTopBtn.style.display = "none";
-    }
-  });
+  // window.addEventListener("scroll", () => {
+  //   if (window.pageYOffset > 580) {
+  //     toTopBtn.style.display = "block";
+  //   } else {
+  //     toTopBtn.style.display = "none";
+  //   }
+  // });
 
-  toTopBtn.addEventListener("click", function () {
-    window.scrollBy({
-      top: -document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
-  });
+  // toTopBtn.addEventListener("click", function () {
+  //   window.scrollBy({
+  //     top: -document.documentElement.scrollHeight,
+  //     behavior: "smooth",
+  //   });
+  // });
 });

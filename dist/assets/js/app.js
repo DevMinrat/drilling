@@ -8,30 +8,38 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".header"),
+      headerFixed = document.querySelector(".header-fixed"),
       burgerMenu = document.querySelector(".burger-menu"),
       menu = document.querySelector(".menu"),
       headerLogo = document.querySelector(".header__logo"),
       anchors = document.querySelectorAll('a[href*="#"]'),
-      textarea = document.querySelector("#contacts-textarea"),
-      counterCurrent = document.querySelector(".textarea-counter__current"),
-      counterTotal = document.querySelector(".textarea-counter__total").textContent = textarea.maxLength,
       toTopBtn = document.querySelector(".arrow-top");
 
   function toggleMobileMenu() {
     header.classList.toggle("mobile");
-    headerLogo.classList.toggle("hide");
-    menu.classList.toggle("show");
-    burgerMenu.classList.toggle("menu-on");
+    headerLogo.classList.toggle("hide"); // menu.classList.toggle("show");
+    // burgerMenu.classList.toggle("menu-on");
   }
 
   function hideMobileMenu() {
     header.classList.remove("mobile");
-    headerLogo.classList.remove("hide");
-    menu.classList.remove("show");
-    burgerMenu.classList.remove("menu-on");
+    headerLogo.classList.remove("hide"); // menu.classList.remove("show");
+    // burgerMenu.classList.remove("menu-on");
   }
 
-  burgerMenu.addEventListener("click", toggleMobileMenu);
+  var scrollPrev = 0;
+  window.addEventListener("scroll", function () {
+    var scrolled = document.documentElement.scrollTop;
+
+    if (scrolled == 0 || scrolled > scrollPrev) {
+      headerFixed.classList.add("out");
+    } else {
+      headerFixed.classList.remove("out");
+    }
+
+    scrollPrev = scrolled;
+  }); // burgerMenu.addEventListener("click", toggleMobileMenu);
+
   window.addEventListener("scroll", hideMobileMenu); // smooth scroll
 
   var _iterator = _createForOfIteratorHelper(anchors),
@@ -52,25 +60,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       _loop();
-    } // button_up
+    } // // button_up
+    // window.addEventListener("scroll", () => {
+    //   if (window.pageYOffset > 580) {
+    //     toTopBtn.style.display = "block";
+    //   } else {
+    //     toTopBtn.style.display = "none";
+    //   }
+    // });
+    // toTopBtn.addEventListener("click", function () {
+    //   window.scrollBy({
+    //     top: -document.documentElement.scrollHeight,
+    //     behavior: "smooth",
+    //   });
+    // });
 
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
-
-  window.addEventListener("scroll", function () {
-    if (window.pageYOffset > 580) {
-      toTopBtn.style.display = "block";
-    } else {
-      toTopBtn.style.display = "none";
-    }
-  });
-  toTopBtn.addEventListener("click", function () {
-    window.scrollBy({
-      top: -document.documentElement.scrollHeight,
-      behavior: "smooth"
-    });
-  });
 });
