@@ -53,19 +53,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // // button_up
-
-  // window.addEventListener("scroll", () => {
-  //   if (window.pageYOffset > 580) {
-  //     toTopBtn.style.display = "block";
-  //   } else {
-  //     toTopBtn.style.display = "none";
-  //   }
-  // });
-
-  // toTopBtn.addEventListener("click", function () {
-  //   window.scrollBy({
-  //     top: -document.documentElement.scrollHeight,
-  //     behavior: "smooth",
-  //   });
-  // });
 });

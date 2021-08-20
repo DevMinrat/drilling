@@ -61,19 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       _loop();
     } // // button_up
-    // window.addEventListener("scroll", () => {
-    //   if (window.pageYOffset > 580) {
-    //     toTopBtn.style.display = "block";
-    //   } else {
-    //     toTopBtn.style.display = "none";
-    //   }
-    // });
-    // toTopBtn.addEventListener("click", function () {
-    //   window.scrollBy({
-    //     top: -document.documentElement.scrollHeight,
-    //     behavior: "smooth",
-    //   });
-    // });
 
   } catch (err) {
     _iterator.e(err);

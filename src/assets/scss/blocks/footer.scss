@@ -164,3 +164,66 @@
 .footer__copy {
   margin-top: auto;
 }
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: absolute;
+  right: 15%;
+  bottom: -40px;
+  z-index: 2;
+
+  width: 103px;
+  height: 130px;
+
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+  color: $white;
+
+  padding-top: 25px;
+
+  background: url(../images/footer/totop-bg.png) no-repeat center;
+  background-size: cover;
+
+  transition: bottom 0.2s linear;
+
+  &:hover {
+    color: $white;
+
+    bottom: 0;
+  }
+}
+
+.footer__top-arrow {
+  position: relative;
+  top: 20px;
+
+  animation: opacitySlideTop 2s infinite;
+}
+
+.footer__top-arrow--second {
+  top: 10px;
+
+  animation: opacitySlideTop 2s infinite, opacitySlideTopSecond 2s infinite;
+}
+
+@keyframes opacitySlideTop {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+}
+@keyframes opacitySlideTopSecond {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
