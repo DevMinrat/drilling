@@ -60,11 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       _loop();
-    } // // button_up
+    } // animation leafs
 
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
+  }
+
+  var leafs = document.querySelectorAll(".leaf");
+  var rotateStep = 0.5;
+  window.addEventListener("scroll", rotateLeafs);
+
+  function rotateLeafs() {
+    leafs.forEach(function (leaf) {
+      leaf.style.transform = "rotateZ(".concat(rotateStep, "deg)");
+      rotateStep += 0.5;
+    });
   }
 });

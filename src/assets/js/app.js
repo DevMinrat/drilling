@@ -52,5 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // // button_up
+  // animation leafs
+
+  const leafs = document.querySelectorAll(".leaf");
+  let rotateStep = 0.5;
+
+  window.addEventListener("scroll", rotateLeafs);
+
+  function rotateLeafs() {
+    leafs.forEach((leaf) => {
+      leaf.style.transform = `rotateZ(${rotateStep}deg)`;
+      rotateStep += 0.5;
+    });
+  }
 });

@@ -1747,6 +1747,32 @@ a:hover {
     background: #eff4f5;
     -webkit-transform: skewY(-13deg);
     transform: skewY(-13deg);
+    -webkit-animation: slideTop 1s;
+    animation: slideTop 1s;
+}
+
+@-webkit-keyframes slideTop {
+    from {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+
+    to {
+        -webkit-transform: translateY(30%);
+        transform: translateY(30%);
+    }
+}
+
+@keyframes slideTop {
+    from {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+
+    to {
+        -webkit-transform: translateY(30%);
+        transform: translateY(30%);
+    }
 }
 
 .exp {
@@ -3070,6 +3096,94 @@ a:hover {
 
 .footer__copy {
     margin-top: auto;
+}
+
+.footer__top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    right: 15%;
+    bottom: -40px;
+    z-index: 2;
+    width: 103px;
+    height: 130px;
+    font-family: "GothamPro-Medium", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    padding-top: 25px;
+    background: url(../images/footer/totop-bg.png) no-repeat center;
+    background-size: cover;
+    transition: bottom 0.2s linear;
+}
+
+.footer__top:hover {
+    color: #ffffff;
+    bottom: 0;
+}
+
+.footer__top-arrow {
+    position: relative;
+    top: 20px;
+    -webkit-animation: opacitySlideTop 2s infinite;
+    animation: opacitySlideTop 2s infinite;
+}
+
+.footer__top-arrow--second {
+    top: 10px;
+    -webkit-animation: opacitySlideTop 2s infinite, opacitySlideTopSecond 2s infinite;
+    animation: opacitySlideTop 2s infinite, opacitySlideTopSecond 2s infinite;
+}
+
+@-webkit-keyframes opacitySlideTop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes opacitySlideTop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes opacitySlideTopSecond {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes opacitySlideTopSecond {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .hide {

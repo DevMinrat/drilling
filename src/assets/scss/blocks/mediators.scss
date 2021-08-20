@@ -53,13 +53,29 @@
 .mediators__img--tree {
   top: -220px;
   right: 80px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .mediators__img--scheme {
   top: 15px;
   left: -40px;
   z-index: 2;
+
+  opacity: 0;
+
+  animation: hideScheme 1.5s, slideInRight 1s;
+}
+
+@keyframes hideScheme {
+  0% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .mediators__img--kamaz {

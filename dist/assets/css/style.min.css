@@ -1266,12 +1266,19 @@ a {
 .intro__slide-block {
   position: absolute;
   left: 0;
-  bottom: -130%;
+  bottom: -100%;
   z-index: -1;
   width: 100%;
   height: 1010px;
   background: #eff4f5;
-  transform: skewY(-13deg); }
+  transform: skewY(-13deg);
+  animation: slideTop 1s; }
+
+@keyframes slideTop {
+  from {
+    transform: translateY(300px) skewY(-13deg); }
+  to {
+    transform: translateY(0) skewY(-13deg); } }
 
 .exp {
   position: relative;
@@ -1576,12 +1583,22 @@ a {
 .mediators__img--tree {
   top: -220px;
   right: 80px;
-  z-index: 1; }
+  z-index: -1; }
 
 .mediators__img--scheme {
   top: 15px;
   left: -40px;
-  z-index: 2; }
+  z-index: 2;
+  opacity: 0;
+  animation: hideScheme 1.5s, slideInRight 1s; }
+
+@keyframes hideScheme {
+  0% {
+    opacity: 1; }
+  79% {
+    opacity: 0.5; }
+  100% {
+    opacity: 0; } }
 
 .mediators__img--kamaz {
   position: relative;
@@ -1926,6 +1943,15 @@ a {
   .results__line--2 {
     top: 5%;
     right: 27%; }
+
+.results__images {
+  position: relative; }
+  .results__images .leaf-main-top {
+    top: -120px; }
+  .results__images .leaf-main-bottom {
+    left: -40px;
+    bottom: 5px;
+    z-index: -1; }
 
 .howwork {
   position: relative;

@@ -236,7 +236,7 @@
 .intro__slide-block {
   position: absolute;
   left: 0;
-  bottom: -130%;
+  bottom: -100%;
   z-index: -1;
 
   width: 100%;
@@ -245,4 +245,15 @@
   background: $third;
 
   transform: skewY(-13deg);
+
+  animation: slideTop 1s;
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateY(300px) skewY(-13deg);
+  }
+  to {
+    transform: translateY(0) skewY(-13deg);
+  }
 }

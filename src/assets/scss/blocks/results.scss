@@ -99,3 +99,17 @@
     right: 27%;
   }
 }
+
+.results__images {
+  position: relative;
+
+  & .leaf-main-top {
+    top: -120px;
+  }
+
+  & .leaf-main-bottom {
+    left: -40px;
+    bottom: 5px;
+    z-index: -1;
+  }
+}
