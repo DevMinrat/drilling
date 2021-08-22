@@ -352,7 +352,7 @@
 
         <!-- Header -->
 
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__inner">
                 <div class="header__logo">
                     <svg class="header__logo-svg">
@@ -431,7 +431,8 @@
         <main>
 
             
-            <section class="intro" id="intro">
+            
+            <section class="intro nav_block" id="intro">
                 <div class="container">
                     <div class="intro__inner">
                         <h1 class="intro__title">
@@ -471,7 +472,7 @@
                 <div class="intro__slide-block"></div>
             </section>
             
-            <section class="exp">
+            <section class="exp nav_block" id="exp">
                 <div class="container">
                     <div class="exp__inner">
                         <div class="exp__header">
@@ -599,7 +600,7 @@
                 </div>
             </div>
             
-            <section class="afterwork">
+            <section class="afterwork nav_block" id="afterwork">
                 <div class="container">
                     <div class="afterwork__inner">
                         <h2 class="section__title"><span class="section__title-sup">после</span>НАШЕЙ РАБОТЫ</h2>
@@ -637,7 +638,7 @@
                 </div>
             </section>
             
-            <section class="mediators">
+            <section class="mediators nav_block" id="mediators">
                 <div class="container">
                     <div class="mediators__inner">
                         <h2 class="section__title section__title--white section__title--mediators"><span
@@ -666,7 +667,7 @@
                 </div>
             </section>
             
-            <section class="guaranties">
+            <section class="guaranties nav_block" id="guaranties">
                 <div class="container">
                     <div class="guaranties__inner">
                         <div class="guaranties__header">
@@ -758,7 +759,7 @@
                 </div>
             </section>
             
-            <section class="documents">
+            <section class="documents nav_block" id="documents">
                 <div class="container">
                     <h2 class="section__title section__title--white"><span class="section__title-sup">документы и</span>Гарантии
                     </h2>
@@ -804,7 +805,7 @@
                 </div>
             </section>
             
-            <section class="results">
+            <section class="results nav_block" id="results">
                 <div class="container">
                     <h2 class="section__title"><span class="section__title-sup">результат</span>нашей работы
                     </h2>
@@ -877,7 +878,7 @@
                 </div>
             </section>
             
-            <section class="howwork">
+            <section class="howwork nav_block" id="howwork">
                 <div class="container">
                     <h2 class="section__title"><span class="section__title-sup">как мы</span>работаем
                     </h2>
@@ -1101,7 +1102,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer nav_block" id="footer">
         
             <div class="footer__map">
                 <script type="text/javascript" charset="utf-8" async
@@ -1144,13 +1145,59 @@
                 </div>
             </div>
         
-            <a href="#intro" class="footer__top">
+            <a href="#header" class="footer__top">
                 <img class="footer__top-arrow footer__top-arrow--first" src="assets/images/footer/totop-arrow.png" alt="">
                 <img class="footer__top-arrow footer__top-arrow--second" src="assets/images/footer/totop-arrow.png" alt="">
                 Наверх
             </a>
-        </footer>
-    </div>
+        </footer>        <div class="navigate">
+            <div class="navigate__dot"></div>
+            <a href="#intro" class="navigate__item active">
+                <span class="navigate__item-num">01</span>
+                <span class="navigate__item-text">Бурение</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#exp" class="navigate__item">
+                <span class="navigate__item-num">02</span>
+                <span class="navigate__item-text">Опыт работы</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#afterwork" class="navigate__item">
+                <span class="navigate__item-num">03</span>
+                <span class="navigate__item-text">Сравнение</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#mediators" class="navigate__item">
+                <span class="navigate__item-num">04</span>
+                <span class="navigate__item-text">Техника</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#guaranties" class="navigate__item">
+                <span class="navigate__item-num">05</span>
+                <span class="navigate__item-text">Качества</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#documents" class="navigate__item">
+                <span class="navigate__item-num">06</span>
+                <span class="navigate__item-text">Гарантии</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#results" class="navigate__item">
+                <span class="navigate__item-num">07</span>
+                <span class="navigate__item-text">Результат</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#howwork" class="navigate__item">
+                <span class="navigate__item-num">08</span>
+                <span class="navigate__item-text">Схема работы</span>
+            </a>
+            <div class="navigate__dot"></div>
+            <a href="#footer" class="navigate__item">
+                <span class="navigate__item-num">09</span>
+                <span class="navigate__item-text">Контакты</span>
+            </a>
+            <div class="navigate__dot"></div>
+        </div>    </div>
 
     <!-- JS -->
     <script src="assets/js/app.js"></script>

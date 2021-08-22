@@ -9,11 +9,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".header"),
       headerFixed = document.querySelector(".header-fixed"),
-      burgerMenu = document.querySelector(".burger-menu"),
-      menu = document.querySelector(".menu"),
       headerLogo = document.querySelector(".header__logo"),
-      anchors = document.querySelectorAll('a[href*="#"]'),
-      toTopBtn = document.querySelector(".arrow-top");
+      anchors = document.querySelectorAll('a[href*="#"]');
 
   function toggleMobileMenu() {
     header.classList.toggle("mobile");
@@ -77,5 +74,24 @@ document.addEventListener("DOMContentLoaded", function () {
       leaf.style.transform = "rotateZ(".concat(rotateStep, "deg)");
       rotateStep += 0.5;
     });
-  }
+  } // navigation
+
+
+  var links = document.querySelectorAll(".navigate__item"),
+      navBlocks = document.querySelectorAll(".nav_block");
+  window.addEventListener("scroll", function () {
+    var scrollDistance = window.scrollY;
+    navBlocks.forEach(function (el, index) {
+      if (scrollDistance >= el.offsetTop - 250) {
+        links.forEach(function (elem) {
+          if (elem.classList.contains("active")) {
+            elem.classList.remove("active");
+          }
+        });
+        links[index].classList.add("active");
+      } else if (scrollDistance < 300) {
+        links[index].classList.remove("active");
+      }
+    });
+  });
 });

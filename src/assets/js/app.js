@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header"),
     headerFixed = document.querySelector(".header-fixed"),
-    burgerMenu = document.querySelector(".burger-menu"),
-    menu = document.querySelector(".menu"),
     headerLogo = document.querySelector(".header__logo"),
-    anchors = document.querySelectorAll('a[href*="#"]'),
-    toTopBtn = document.querySelector(".arrow-top");
+    anchors = document.querySelectorAll('a[href*="#"]');
 
   function toggleMobileMenu() {
     header.classList.toggle("mobile");
@@ -65,4 +62,27 @@ document.addEventListener("DOMContentLoaded", () => {
       rotateStep += 0.5;
     });
   }
+
+  // navigation
+
+  const links = document.querySelectorAll(".navigate__item"),
+    navBlocks = document.querySelectorAll(".nav_block");
+
+  window.addEventListener("scroll", () => {
+    let scrollDistance = window.scrollY;
+
+    navBlocks.forEach((el, index) => {
+      if (scrollDistance >= el.offsetTop - 250) {
+        links.forEach((elem) => {
+          if (elem.classList.contains("active")) {
+            elem.classList.remove("active");
+          }
+        });
+
+        links[index].classList.add("active");
+      } else if (scrollDistance < 300) {
+        links[index].classList.remove("active");
+      }
+    });
+  });
 });

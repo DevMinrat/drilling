@@ -1740,7 +1740,7 @@ a:hover {
 .intro__slide-block {
     position: absolute;
     left: 0;
-    bottom: -130%;
+    bottom: -100%;
     z-index: -1;
     width: 100%;
     height: 1010px;
@@ -1753,25 +1753,25 @@ a:hover {
 
 @-webkit-keyframes slideTop {
     from {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translateY(300px) skewY(-13deg);
+        transform: translateY(300px) skewY(-13deg);
     }
 
     to {
-        -webkit-transform: translateY(30%);
-        transform: translateY(30%);
+        -webkit-transform: translateY(0) skewY(-13deg);
+        transform: translateY(0) skewY(-13deg);
     }
 }
 
 @keyframes slideTop {
     from {
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translateY(300px) skewY(-13deg);
+        transform: translateY(300px) skewY(-13deg);
     }
 
     to {
-        -webkit-transform: translateY(30%);
-        transform: translateY(30%);
+        -webkit-transform: translateY(0) skewY(-13deg);
+        transform: translateY(0) skewY(-13deg);
     }
 }
 
@@ -2177,13 +2177,44 @@ a:hover {
 .mediators__img--tree {
     top: -220px;
     right: 80px;
-    z-index: 1;
+    z-index: -1;
 }
 
 .mediators__img--scheme {
     top: 15px;
     left: -40px;
     z-index: 2;
+    opacity: 0;
+    -webkit-animation: hideScheme 1.5s, slideInRight 1s;
+    animation: hideScheme 1.5s, slideInRight 1s;
+}
+
+@-webkit-keyframes hideScheme {
+    0% {
+        opacity: 1;
+    }
+
+    79% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hideScheme {
+    0% {
+        opacity: 1;
+    }
+
+    79% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .mediators__img--kamaz {
@@ -2671,6 +2702,20 @@ a:hover {
     right: 27%;
 }
 
+.results__images {
+    position: relative;
+}
+
+.results__images .leaf-main-top {
+    top: -120px;
+}
+
+.results__images .leaf-main-bottom {
+    left: -40px;
+    bottom: 5px;
+    z-index: -1;
+}
+
 .howwork {
     position: relative;
     padding-top: 200px;
@@ -3000,13 +3045,11 @@ a:hover {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -80px;
+    bottom: 0;
     z-index: -1;
     width: 100%;
-    height: 300px;
-    background-color: #005aff;
-    -webkit-transform: skewY(-13deg);
-    transform: skewY(-13deg);
+    height: 263px;
+    background: url(../images/footer/footer-content-bg.png) no-repeat;
 }
 
 .footer__logo-svg {
@@ -3107,10 +3150,10 @@ a:hover {
     flex-direction: column;
     position: absolute;
     right: 15%;
-    bottom: -40px;
+    bottom: 0px;
     z-index: 2;
     width: 103px;
-    height: 130px;
+    height: 90px;
     font-family: "GothamPro-Medium", sans-serif;
     font-weight: 500;
     color: #ffffff;
@@ -3184,6 +3227,96 @@ a:hover {
     to {
         opacity: 1;
     }
+}
+
+.navigate {
+    position: fixed;
+    top: 30%;
+    left: 50px;
+    z-index: 999999;
+}
+
+.navigate__dot {
+    width: 2px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.navigate__item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.1s linear;
+}
+
+.navigate__item::after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1px;
+    background-color: #000000;
+    transition: all 0.1s linear;
+}
+
+.navigate__item:focus {
+    outline: none;
+}
+
+.navigate__item:hover {
+    border-left-color: rgba(0, 0, 0, 0.3);
+}
+
+.navigate__item:hover::after {
+    width: 4px;
+}
+
+.navigate__item:hover .navigate__item-num {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.navigate__item:hover .navigate__item-text {
+    opacity: 1;
+}
+
+.navigate__item-num {
+    color: rgba(0, 0, 0, 0.3);
+    transition: all 0.1s linear;
+}
+
+.navigate__item-text {
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    color: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+    transition: opacity 0.1s linear;
+}
+
+.navigate__item.active {
+    border-left: 1px solid black;
+}
+
+.navigate__item.active .navigate__item-num {
+    color: #000000;
+}
+
+.navigate__item.active .navigate__item-text {
+    opacity: 1;
+    color: #000000;
+}
+
+.navigate__item.active::after {
+    width: 8px;
 }
 
 .hide {
