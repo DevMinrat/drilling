@@ -13,7 +13,7 @@ ____
 :four: При создании использовалась сборка GULP     
     
 
-#### Демонстрация работы приложения    
+#### Демонстрация сайта 
 ____    
 
 ![image](https://github.com/DevMinrat/drilling/blob/master/kjXSLLE47K.gif)
