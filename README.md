@@ -16,7 +16,7 @@ ____
 #### Демонстрация работы приложения    
 ____    
 
-![image](https://github.com/DevMinrat/weather-app/blob/master/REXxDgGoXb.gif)
+![image](https://github.com/DevMinrat/drilling/blob/master/kjXSLLE47K.gif)
 
 #### Ссылки    
 ____   
